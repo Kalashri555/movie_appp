@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import Fire from './assests/fire.png'
+import Star from './assests/star.png'
+import Party from './assests/hero.png'
+import Navbar from './components/Navbar/Navbar';
+import MovieList from './components/MovieList/MovieList';
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <Navbar />
+      <MovieList type="popular" title="Popular" emoji={Fire} />
+      <MovieList type="top_rated" title="Top Rated" emoji={Star} />
+      <MovieList type="upcoming" title="Upcoming" emoji={Party} />
+
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
